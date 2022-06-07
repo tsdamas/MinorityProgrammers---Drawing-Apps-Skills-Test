@@ -1,4 +1,5 @@
 import  {useState, useRef, useEffect } from "react";
+import photo from "./hand-drawing.png"
 import './App.css';
 
 function App() {
@@ -65,14 +66,31 @@ function App() {
     link.click();  
   }
 
+  //function to download svg drawing
+  let downloadSvgDrawing = () => {
+    let canvas = document.querySelector("canvas"); 
+    let url = canvas.toDataURL("image/svg");
+    let link = document.createElement("a");
+    link.download = "filename.svg";
+    link.href = url;
+    link.click();  
+  }
+
 
 
   return (
     <div className="App container-fluid">
       <header className="App-header">
       </header>
-      <h1 className="title">Let's get drawing</h1>
-      <div className="drawing-space">
+      <div className="row">
+      <div className="col-6">
+        <img src={photo} alt="hand writing" className="img-fluid"></img> 
+        <div className="title-container">
+      <h4 className="title">Let it be</h4>
+      <p>Let your <span className="creativity">creativity</span> dictates your expression.</p>
+      </div>
+      </div>
+      <div className="col-6 drawing-space">
         <canvas 
         onMouseDown={beginDrawing}
         onMouseUp={endDrawing}
@@ -81,8 +99,10 @@ function App() {
         width={`600px`}
         height={`400px`}
         />
-        <button className="save-button" onClick={downloadDrawing}>Save</button>
         <button className="erase-button" onClick={eraseDrawing}>Reset</button>
+        <button className="save-button" onClick={downloadDrawing}>Save PNG</button>
+        <button className="save-svg-button" onClick={downloadSvgDrawing}>Save SVG</button>
+      </div>
       </div>
     </div>
   );
