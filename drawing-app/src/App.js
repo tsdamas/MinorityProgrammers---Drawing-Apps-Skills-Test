@@ -1,4 +1,5 @@
 import  {useState, useRef, useEffect } from "react";
+import Menu from "./Menu";
 import photo from "./hand-drawing.png"
 import './App.css';
 
@@ -9,6 +10,10 @@ function App() {
   let boxRef = useRef(null); //create the box that holds the drawing
   let lineRef = useRef(null); //create a line that persit and will not cause re-render
   let [startDrawing, setStartDrawing] = useState(false);
+  let [lineWidth, setLineWidth] = useState(5);
+  let [lineColor, setLineColor] = useState("black");
+  let [lineOpacity, setLineOpacity] = useState(0.1); 
+  
 
   //useEffect to render after the component renders
   useEffect(() => {
@@ -17,7 +22,10 @@ function App() {
     line.lineCap = "round";
     line.lineJoin = "round";
     lineRef.current = line;
-  })
+    line.globalAlpha = lineOpacity;
+    line.strokeStyle = lineColor;
+    line.lineWidth = lineWidth;
+  }, [lineColor, lineOpacity, lineWidth]);
 
 
 
@@ -102,6 +110,11 @@ function App() {
       </div>
       <div className="col-sm-4 drawing-area">
         <div className="drawing-space">
+          <Menu 
+          setLineColor={setLineColor}
+          setLineWidth={setLineWidth}
+          setLineOpacity={setLineOpacity}
+          />
         <canvas 
         onMouseDown={beginDrawing}
         onMouseUp={endDrawing}
@@ -115,9 +128,9 @@ function App() {
         <button className="save-button" onClick={downloadDrawing}>Save PNG</button>
         <button className="save-svg-button" onClick={downloadSvgDrawing}>Save SVG</button>
       </div>
-        <div className="col-sm-4 right-buttons">
-        <button className="erase-button" onClick={erasePartDrawing}>Erase</button>
-        <button className="draw-button" onClick={setDrawing}>Draw</button>
+        <div className="col-4 right-buttons">
+        <button className="erase-button" onClick={erasePartDrawing}>E</button>
+        <button className="draw-button" onClick={setDrawing}>D</button>
         </div>
       </div>
     </div>
