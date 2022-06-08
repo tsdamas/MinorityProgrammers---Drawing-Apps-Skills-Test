@@ -76,6 +76,16 @@ function App() {
     link.click();  
   }
 
+  //function start drawing after using the partial erase 
+  let setDrawing = () =>{
+    boxRef.current.globalCompositionOperation = "source-over"; 
+  }
+
+  //function erase part of drawing
+  let erasePartDrawing = () => {
+    boxRef.current.globalCompositionOperation = "destination-out";
+  }
+
 
 
   return (
@@ -100,6 +110,8 @@ function App() {
         height={`400px`}
         />
         <button className="erase-button" onClick={eraseDrawing}>Reset</button>
+        <button className="erase-part-button" onClick={erasePartDrawing}>Erase</button>
+        <button className="draw" onClick={setDrawing}>Draw</button>
         <button className="save-button" onClick={downloadDrawing}>Save PNG</button>
         <button className="save-svg-button" onClick={downloadSvgDrawing}>Save SVG</button>
       </div>

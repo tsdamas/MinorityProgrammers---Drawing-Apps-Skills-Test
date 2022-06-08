@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Drawing App
+This is a drawing app for people draw what comes to mind or do some whiteboarding code. It uses React, javascript, html and CSS.
+
+
+## Description 
+This project is part of assessment to join Minority Programmers volunteering program. It allows users to draw in the canvas, including certain abilities, such as erase, save png, svg and reset the canvas.
+
+## Contribution Guidelines
+The contribution guidelines are as per the guide HERE.
+
+Instructions Fork this Repository Clone your forked repository Add your scripts Commit & Push Create a pull request Star this repository Wait for Pull Request to merge Celebrate, your first step into the open Source World and contribute more
+
+Note: When you Add a project Add it to the README for ease of finding it Note: Please do not put the project link to reference your local forked repo. Always link it to this repo after it's been merged with main.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +82,38 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Built with 
+- React
+- Javascript
+- HTML
+- CSS
+
+## Links
+
+- [Repo] () 
+- [Live] (link, "Live view")
+- [Bugs] ()
+
+## Screenshots
+
+![Home Page] (link "Drawing app")
+
+## Future Updates
+
+- [ ] Mobile Responsive
+- [ ] Tests
+
+**Thais Damasceno**
+
+- [Profile](https://github.com/tsdamas "Thais Damasceno")
+- [Email](mailto:tssdamasceno@gmail.com?subject=Hi "Hi!")
+- [Website](https://stoic-mclean-831fce.netlify.app "Welcome")
+
+## 🤝 Support
+
+Contributions, issues, and feature requests are welcome!
+
+Give a ⭐️ if you like this project!
+
+
