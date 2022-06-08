@@ -36,16 +36,47 @@ margin-left: 15%;
 margin-top: 20px;
 }
 
+.description-area{
+  margin-right: 15rem;
+}
+
+.right-buttons{
+  width: 150px;
+}
 
 .drawing-space{
 width: 600px;
 height: 400px;
 border-radius: 5%;
-margin-top: 8rem;
-margin-left: 40px;
-margin-bottom: 10rem;
 background-color: #fff;
+display: inline-block;
+margin-top: 8rem;
+justify-content: center;
 }
+
+.draw-button, 
+.erase-button 
+{
+  font-weight: bold;
+  color: #fff;
+  background-color: #E86969;
+  border: 1px solid #E86969;
+  border-radius: 5px;
+  line-height: 20px;
+  padding: 10px 10px;
+  display: block;
+}
+
+.erase-button{
+  margin-top: 8rem;
+  margin-left: 30px;
+}
+
+.draw-button{
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
 
 .save-button, 
 .save-svg-button{
@@ -61,21 +92,23 @@ background-color: #fff;
   cursor: pointer;
 }
 
-
-
-.erase-button{
+.reset-button{
   font-weight: bold;
   color: #fff;
-  background-color: #F6B84A;
-  border: 1px solid #F6B84A;
-  border-radius: 5px;
+  background-color: #E86969;
+  border: 1px solid #E86969;
+  border-radius: 25px;
   line-height: 20px;
-  padding: 10px 10px;
+  padding: 10px 30px;
+  margin-right: 20px;
   margin-top: 10px;
   cursor: pointer;
-  display: inline;
-  margin-right: 100px;
 }
+
+.reset-button {
+  margin-left: 5rem;
+}
+
 
 .row {
   width: 100%;

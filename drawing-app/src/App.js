@@ -76,14 +76,14 @@ function App() {
     link.click();  
   }
 
-  //function start drawing after using the partial erase 
+  //function set drawing after using the partial erase. 
   let setDrawing = () =>{
-    boxRef.current.globalCompositionOperation = "source-over"; 
+    lineRef.current.globalCompositeOperation = "source-over"; 
   }
 
   //function erase part of drawing
   let erasePartDrawing = () => {
-    boxRef.current.globalCompositionOperation = "destination-out";
+    lineRef.current.globalCompositeOperation = "destination-out";
   }
 
 
@@ -93,14 +93,15 @@ function App() {
       <header className="App-header">
       </header>
       <div className="row">
-      <div className="col-6">
+      <div className="col-sm-4 description-area">
         <img src={photo} alt="hand writing" className="img-fluid"></img> 
         <div className="title-container">
       <h4 className="title">Let it be</h4>
       <p>Let your <span className="creativity">creativity</span> dictates your expression.</p>
       </div>
       </div>
-      <div className="col-6 drawing-space">
+      <div className="col-sm-4 drawing-area">
+        <div className="drawing-space">
         <canvas 
         onMouseDown={beginDrawing}
         onMouseUp={endDrawing}
@@ -109,12 +110,15 @@ function App() {
         width={`600px`}
         height={`400px`}
         />
-        <button className="erase-button" onClick={eraseDrawing}>Reset</button>
-        <button className="erase-part-button" onClick={erasePartDrawing}>Erase</button>
-        <button className="draw" onClick={setDrawing}>Draw</button>
+        </div>
+        <button className="reset-button" onClick={eraseDrawing}>Reset</button>
         <button className="save-button" onClick={downloadDrawing}>Save PNG</button>
         <button className="save-svg-button" onClick={downloadSvgDrawing}>Save SVG</button>
       </div>
+        <div className="col-sm-4 right-buttons">
+        <button className="erase-button" onClick={erasePartDrawing}>Erase</button>
+        <button className="draw-button" onClick={setDrawing}>Draw</button>
+        </div>
       </div>
     </div>
   );
