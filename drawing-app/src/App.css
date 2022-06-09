@@ -19,8 +19,9 @@ p{
 }
 
 .title-container{
-  width: 50%;
+  width: 60%;
   margin: 40px auto;
+  margin-left: 40%;
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
@@ -52,6 +53,7 @@ border-radius: 5%;
 background-color: #fff;
 display: inline-block;
 margin-top: 8rem;
+margin-bottom: 0rem;
 justify-content: center;
 }
 
@@ -89,7 +91,6 @@ justify-content: center;
   line-height: 20px;
   padding: 10px 30px;
   margin-right: 15px;
-  margin-top: 10px;
   margin-bottom: 10rem;
   cursor: pointer;
 }
@@ -103,7 +104,6 @@ justify-content: center;
   line-height: 20px;
   padding: 10px 30px;
   margin-right: 20px;
-  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -121,11 +121,12 @@ justify-content: center;
 .Menu{
   height:50px;
   font-size: 15px;
-  justify-content: space-between;
   border-radius: 5px;
   align-items: center;
   margin: auto;
   margin-top: 10px;
+}
 
-
+.Menu input{
+  margin-right: 10px;
 }
